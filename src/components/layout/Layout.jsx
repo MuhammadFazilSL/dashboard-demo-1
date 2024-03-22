@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './layout.css'
 
-import Sidebar from '../sidebar/Sidebar'
+import Sidebar, { handlesidebar } from '../sidebar/Sidebar'
 import TopNav from '../topnav/TopNav'
 import Routes from '../Routes'
 
@@ -17,7 +17,13 @@ const Layout = () => {
     const themeReducer = useSelector(state => state.ThemeReducer)
 
     const dispatch = useDispatch()
+const [sidebaricon, setsidebaricon] = useState(true)
+    const sidebartoggle = () =>{
+        
+        handlesidebar();
+        setsidebaricon(!sidebaricon)
 
+    }
     useEffect(() => {
         const themeClass = localStorage.getItem('themeMode', 'theme-mode-light')
 
@@ -32,9 +38,9 @@ const Layout = () => {
         <BrowserRouter>
             <Route render={(props) => (
                 <div className={`layout ${themeReducer.mode} ${themeReducer.color}`}>
-                    <Sidebar {...props}/>
+                    <Sidebar {...props} />
                     <div className="layout__content">
-                        <TopNav/>
+                        <TopNav sidebartoggle={sidebartoggle} sidebaricon={sidebaricon} />
                         <div className="layout__content-main">
                             <Routes/>
                         </div>

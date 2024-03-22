@@ -1,6 +1,7 @@
 .topnav {
     padding: 30px;
     display: flex;
+    gap: 15px;
     align-items: center;
     justify-content: space-between;
     height: var(--topnav-height);
@@ -77,4 +78,43 @@
 .topnav__right-user__name {
     font-size: 1rem;
     font-weight: 600;
+}
+
+#menu-icon{
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+
+    #menu-icon{
+        display: block;
+    }
+    .topnav {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .topnav {
+        padding: 30px 15px;
+        justify-content: flex-end;
+    }
+    .topnav__right-user__image {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    .topnav__right-user__name {
+        font-size: 0.8rem;
+    }
+    .topnav__right-item ~ .topnav__right-item {
+        margin-left: 13px;
+    }
+    .topnav__search {
+        display: none;
+    }
+
+    #menu-icon{
+        display: block;
+    }
 }

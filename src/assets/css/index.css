@@ -9,6 +9,7 @@
     --second-color: #62b4ff;
     --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
+
     --main-bg-light: #ffffff;
     --second-bg-light: #fafafb;
     --txt-color-light: #455560;
@@ -150,4 +151,13 @@ input:focus {
 .orange-color {
     background-color: var(--main-color-orange);
     color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .full-height {
+        padding: 5px;
+        height: 250px !important;
+        width: 400px !important;
+    }
+
 }

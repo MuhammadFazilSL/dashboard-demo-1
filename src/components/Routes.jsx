@@ -11,7 +11,7 @@ import Settings from './settings/Settings'
 const Routes = () => {
     return (
         <Switch>
-            <Route path='/' exact component={Dashboard}/>
+            <Route path='' exact component={Dashboard}/>
             <Route path='/customers' component={Customers}/>
             <Route path='/products' component={Products}/>
             <Route path='/orders' component={Orders}/>

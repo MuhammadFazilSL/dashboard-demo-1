@@ -11,3 +11,23 @@
 .layout__content-main {
     padding: 30px;
 }
+
+
+@media screen and (max-width: 480px) {
+
+    .layout__content {
+        padding-left: 0;
+    }
+    .layout__content-main {
+        padding: 10px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 780px) {
+    
+    .layout__content {
+        padding-left: 0;
+    }
+}

@@ -170,7 +170,7 @@ const Dashboard = () => {
         <div>
             <h2 className="page-header">Dashboard</h2>
             <div className="row">
-                <div className="col-6">
+                <div className="col-6 md-col-6">
                     <div className="row">
                         {
                             statusCards.map((item, index) => (
@@ -186,7 +186,7 @@ const Dashboard = () => {
                         }
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-6 charts">
                     <div className="card full-height">
                         {/* chart */}
                         <Chart

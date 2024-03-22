@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './topnav.css'
 
@@ -47,7 +47,8 @@ const renderUserMenu =(item, index) => (
     </Link>
 )
 
-const Topnav = () => {
+const Topnav = (props) => {
+    
     return (
         <div className='topnav'>
             <div className="topnav__search">
@@ -63,6 +64,28 @@ const Topnav = () => {
                         renderItems={(item, index) => renderUserMenu(item, index)}
                     />
                 </div>
+               {
+                props.sidebaricon===true ?
+                <div className="topnav__right-item" id='menu-icon'  onClick={()=>{props.sidebartoggle()}}>
+                  
+                <Dropdown
+                icon='bx bx-menu'
+            />
+          
+            </div>
+            :
+            <div className="topnav__right-item" id='menu-icon' onClick={()=>{props.sidebartoggle()}}>
+                  
+            <Dropdown
+            icon='bx bx-left-indent'
+        />
+      
+        </div>
+               }
+                
+             
+            
+               
                 <div className="topnav__right-item">
                     <Dropdown
                         icon='bx bx-bell'

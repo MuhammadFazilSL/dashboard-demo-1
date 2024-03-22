@@ -111,6 +111,7 @@
 /* SMALL SCREEN */
 
 @media only screen and (max-width: 500px) {
+    
     .col-sm-1 {
         width: 8.33%;
     }
@@ -158,4 +159,49 @@
     .col-sm-12 {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 780px) {
+    .row{
+        justify-content: center;
+    }
+    .md-col-6{
+        width: 100%;
+    }
+    .layout__content-main>div>.row>.md-col-6>.row>.col-6{
+        width: 40%;
+    }
+    .charts{
+        width: 80%;
+    }
+    .card.full-height {
+        height: calc(100% - 30px);
+        min-height: 300px;
+    }
+    .col-4 {
+        width: 40%;
+    }
+    .col-8 {
+        width: 60%;
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+.row{
+    flex-direction: column;
+    align-items: center;
+}
+.layout__content-main>div>.row>.md-col-6>.row>.col-6{
+    width: 90%;
+}
+.col-4{
+    width: 100%;
+}
+.col-8{
+    width: 100%;
+}
+.charts{
+    overflow-x: scroll;
+}
+
 }

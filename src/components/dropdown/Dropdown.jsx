@@ -21,6 +21,7 @@ const Dropdown = props => {
     const dropdown_toggle_el = useRef(null)
     const dropdown_content_el = useRef(null)
 
+    console.log(props)
     clickOutsideRef(dropdown_content_el, dropdown_toggle_el)
     
     return (
