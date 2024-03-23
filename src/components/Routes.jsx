@@ -15,7 +15,6 @@ const Routes = () => {
             <Route path='/customers' component={Customers}/>
             <Route path='/products' component={Products}/>
             <Route path='/orders' component={Orders}/>
-            <Route path='/customers' component={Customers}/>
             <Route path='/settings' component={Settings}/>
         </Switch>
     )
