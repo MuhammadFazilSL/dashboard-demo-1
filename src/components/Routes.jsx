@@ -11,7 +11,7 @@ import Settings from './settings/Settings'
 const Routes = () => {
     return (
         <Switch baseName="/dashboard-demo-1/" >
-            <Route path='/dashboard-demo-1/' exact component={Dashboard}/>
+            <Route path='/dashboard-demo-1/' component={Dashboard}/>
             <Route path='/customers' component={Customers}/>
             <Route path='/products' component={Products}/>
             <Route path='/orders' component={Orders}/>
